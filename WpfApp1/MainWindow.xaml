@@ -1,0 +1,275 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFF0F0F0">
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Width="250">
+                <Border Height="240" Width="220" BorderThickness="2">
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="Black" Opacity="0.3" />
+                    </Border.BorderBrush>
+                    <StackPanel   Background="White" Height="240" Width="220">
+                        <Image HorizontalAlignment="Center" Margin="30" Source="/Resources/photo2.jpg" />
+                    </StackPanel>
+                </Border>
+                
+                
+                <Button HorizontalAlignment="Left" Width="100" Margin="10">Выбрать фото</Button>
+                <Button HorizontalAlignment="Left"  Width="150" Margin="10">Штатное расписание</Button>
+                <Button HorizontalAlignment="Left"  Width="150" Margin="10">Отпуска работника</Button>
+                <Button HorizontalAlignment="Left"  Width="150" Margin="10">Командировки работника</Button>
+            </StackPanel>
+            <StackPanel Width="550" Orientation="Vertical">
+                <StackPanel>
+                    <TabControl Height="315" Margin="10" HorizontalAlignment="Center">
+                        <TabItem>
+                            <TabItem.Header >Основные данные</TabItem.Header>
+                            <TabItem.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Margin="5" Orientation="Horizontal">
+                                        <TextBlock Margin="2">Таб. №</TextBlock>
+                                        <TextBox Margin="2" Width="80">0033</TextBox>
+                                        <TextBlock Margin="70 2">Пол</TextBlock>
+                                        <RadioButton GroupName="Gender" Content="Муж"></RadioButton>
+                                        <RadioButton GroupName="Gender" Content="Жен"></RadioButton>
+
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Margin="2">Фамилия:</TextBlock>
+                                            <TextBox Margin="2" Width="150"> Байсеитов</TextBox>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Margin="2">Имя:</TextBlock>
+                                            <TextBox Margin="2" Width="150">Сакен</TextBox>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Margin="2">Отчество:</TextBlock>
+                                            <TextBox Margin="2" Width="150">Бактыбаевич</TextBox>
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <GroupBox Header="Место рождения" Padding="10" Width="250">
+                                            <StackPanel Orientation="Vertical">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <StackPanel Orientation="Vertical">
+                                                        <TextBlock Margin="3">Страна:</TextBlock>
+                                                        <TextBlock Margin="3">Город    :</TextBlock>
+                                                        <TextBlock Margin="3">Район    :</TextBlock>
+                                                        <TextBlock Margin="3">Область    :</TextBlock>
+                                                    </StackPanel>
+                                                    <StackPanel Orientation="Vertical">
+                                                        <TextBox Margin="3">Казахстан</TextBox>
+                                                        <TextBox Margin="3">Алматы</TextBox>
+                                                        <TextBox Margin="3">Алатауский район</TextBox>
+                                                        <TextBox Margin="3">Алматинская область</TextBox>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                                
+                                            </StackPanel>
+                                            
+                                        </GroupBox>
+                                        <StackPanel Margin="10" Orientation="Vertical">
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Margin="3">Дата рождения:</TextBlock>
+                                                <TextBox Margin="3" Width="100"> 14.02.1983</TextBox>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Margin="3">Семейное положение:</TextBlock>
+                                                <ComboBox Margin="3" Width="100">
+                                                    <ComboBoxItem>Женат(Замужем)</ComboBoxItem>
+                                                </ComboBox>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Margin="3">Образование:</TextBlock>
+                                                <ComboBox Margin="3" Width="100">
+                                                    <ComboBoxItem>Высшее образование</ComboBoxItem>
+                                                </ComboBox>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </TabItem.Content>
+                        </TabItem>
+                        <TabItem>
+                            <TabItem.Header>Дополнительные данные</TabItem.Header>
+                            <TabItem.Content>
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Margin="3">ИНН:</TextBlock>
+                                        <TextBox Margin="3" HorizontalAlignment="Left" Width="200"> 830214|105095</TextBox>
+                                    </StackPanel>
+                                    <GroupBox Margin="5" Padding="10" Header="Место регистрации">
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel Margin="2" Width="70" Orientation="Vertical">
+                                                <TextBlock Margin="1">Индекс:</TextBlock>
+                                                <TextBox Margin="1">010000</TextBox>
+                                            </StackPanel>
+                                            <StackPanel Margin="2" Width="370" Orientation="Vertical">
+                                                <TextBlock Margin="1">Адрес:</TextBlock>
+                                                <TextBox Margin="1" >г. Алматы, ул. Еримбетова 6</TextBox>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </GroupBox>
+                                    <GroupBox Margin="5" Padding="10" Header="Место жительства фактическое">
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel Margin="2" Width="70" Orientation="Vertical">
+                                                <TextBlock Margin="1">Индекс:</TextBlock>
+                                                <TextBox Margin="1">010000</TextBox>
+                                            </StackPanel>
+                                            <StackPanel Margin="2" Width="370" Orientation="Vertical">
+                                                <TextBlock Margin="1">Адрес:</TextBlock>
+                                                <TextBox Margin="1" >г. Алматы, ул. Еримбетова 6</TextBox>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </GroupBox>
+                                    <StackPanel Margin="3" Orientation="Horizontal">
+                                        <TextBlock Margin="2">Телефоны:</TextBlock>
+                                        <TextBox Margin="2" Width="400">+77272504896</TextBox>
+                                    </StackPanel>
+                                </StackPanel>
+                            </TabItem.Content>
+                        </TabItem>
+                        <TabItem>
+                            <TabItem.Header>Состав семьи</TabItem.Header>
+                            <TabItem.Content>1</TabItem.Content>
+                        </TabItem>
+                        <TabItem>
+                            <TabItem.Header>Должности</TabItem.Header>
+                            <TabItem.Content>
+                                <StackPanel Orientation="Vertical" Height="263">
+                                    <StackPanel Margin="5" Orientation="Horizontal">
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Margin="2" >Штат. расписание</TextBlock>
+                                                <ComboBox Width="50"></ComboBox>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Margin="2" >Характер работы</TextBlock>
+                                                <ComboBox Width="50"></ComboBox>
+                                            </StackPanel>
+                                        </StackPanel>
+                                       
+                                    </StackPanel>
+                                    <StackPanel Margin="5" Orientation="Horizontal">
+                                        <TextBlock Margin="2" >Принят на работу с:</TextBlock>
+                                        <TextBox Margin="2" Width="100"  >01.12.2004</TextBox>
+                                        <TextBlock Margin="2" > по :</TextBlock>
+                                        <TextBox Margin="2" Width="100"  >01.12.2015</TextBox>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <StackPanel Margin="5" Orientation="Vertical">
+                                            <TextBlock>Ставка:</TextBlock>
+                                            <TextBox Width="100" > 1</TextBox>
+                                        </StackPanel>
+                                        <TextBlock VerticalAlignment="Center">*</TextBlock>
+                                        <StackPanel Margin="5"  Orientation="Vertical">
+                                            <TextBlock>Оклад, тн.:</TextBlock>
+                                            <TextBox Width="100" >250000</TextBox>
+                                        </StackPanel>
+                                        <TextBlock VerticalAlignment="Center">+</TextBlock>
+                                        <StackPanel  Margin="5" Orientation="Vertical">
+                                            <TextBlock>Надбавка, тн.:</TextBlock>
+                                            <TextBox Width="100" >50000</TextBox>
+                                        </StackPanel>
+                                        <TextBlock VerticalAlignment="Center" >=</TextBlock>
+                                        <StackPanel  Margin="5" Orientation="Vertical">
+                                            <TextBlock>Зар.плата, тн:</TextBlock>
+                                            <TextBox Width="100" >300000</TextBox>
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                    <StackPanel Margin="5" Orientation="Horizontal">
+                                        <TextBlock Margin="2" >Договор №</TextBlock>
+                                        <TextBox Width="100" Margin="2" >52</TextBox>
+                                        <TextBlock Margin="2" > от </TextBlock>
+                                        <TextBox Width="100"  Margin="2" >01.02.2004</TextBox>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <StackPanel Margin="5" Orientation="Vertical">
+                                            <TextBlock>Основание приема на работу:</TextBlock>
+                                            <TextBox Width="500" >приказ №12 от 12.03.2004</TextBox>
+                                        </StackPanel>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <CheckBox Margin="5"></CheckBox>
+                                        <TextBlock Margin="5">Уволен</TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                        <Image Source="/Resources/1223.jpg" Height="22" Width="181"/>
+
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                        <Button Width="200" Margin="5">Приказ о приеме на работу</Button>
+                                        <Button Width="200" Margin="5">Приказ об увольнении</Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </TabItem.Content>
+                        </TabItem>
+                        <TabItem>
+                            <TabItem.Header>Документы</TabItem.Header>
+                            <TabItem.Content>1</TabItem.Content>
+                        </TabItem>
+                        <TabItem>
+                            <TabItem.Header>Образование</TabItem.Header>
+                            <TabItem.Content>
+                                <StackPanel Orientation="Vertical" Height="279">
+                                    <StackPanel Margin="5" Orientation="Horizontal">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="1" >Код документа:</TextBlock>
+                                            <ComboBox Margin="1" Width="60"  >0007</ComboBox>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="2" > Год окончания:</TextBlock>
+                                            <TextBox Margin="2" Width="60"  >2003</TextBox>
+                                        </StackPanel>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Margin="5">Учреждение:</TextBlock>
+                                        <TextBox Width="414"  Margin="2">Алматинская Академия Экономики и Статистики (ААЭС)</TextBox>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Margin="5">Квалификация:</TextBlock>
+                                        <TextBox Width="403"  Margin="2">бакалавр</TextBox>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Margin="5">Спецаильность:</TextBlock>
+                                        <TextBox Width="400" Margin="2">Экономист</TextBox>
+                                    </StackPanel>
+                                    <DataGrid Height="100" Margin="10">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="Код документа"/>
+                                            <DataGridTextColumn Header="Учреждение"/>
+                                            <DataGridTextColumn Header="Квалификация"/>
+                                            <DataGridTextColumn Header="Специальность"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                    <Image Margin="10" HorizontalAlignment="Left" Source="/Resources/1223.jpg" Height="22" Width="181"/>
+                                </StackPanel>
+
+
+                            </TabItem.Content>
+                        </TabItem>
+                        
+
+                    </TabControl>
+                </StackPanel>
+                <Button HorizontalAlignment="Left"  Width="150" Margin="10">Поощрения работника</Button>
+                <StackPanel Orientation="Horizontal">
+                    <Button HorizontalAlignment="Left"  Width="150" Margin="10">Печать личной карточки</Button>
+                    <StackPanel HorizontalAlignment="Right" Margin="230 5" Orientation="Horizontal">
+                        <Button Margin="10" Width="50" HorizontalAlignment="Right">ОК</Button>
+                        <Button Margin="10" Width="50" HorizontalAlignment="Right">Отмена</Button>
+                    </StackPanel>
+                </StackPanel>
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
